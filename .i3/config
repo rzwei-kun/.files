@@ -1,6 +1,4 @@
-######################################
-## General Configs
-
+# General
 
 set $mod Mod4
 font pango:Misc Termsyn, Wuncon Siji 
@@ -16,14 +14,7 @@ smart_gaps on
 smart_borders on
 
 
-## End General Configs
-#######################################
-
-
-
-#######################################
-## General Keybindings
-
+# Keybindings
 # Quick Launch
 bindsym $mod+Return exec --no-startup-id termite
 bindsym $mod+Shift+Return exec --no-startup-id termite -e "tmux attach -t rzwei"
@@ -32,7 +23,6 @@ bindsym $mod+d exec --no-startup-id rofi -show drun -p "Run:"
 bindsym $mod+p exec --no-startup-id termite -r "filemanager" -e vifm
 bindsym $mod+b exec --no-startup-id chromium
 bindsym $mod+Shift+b exec --no-startup-id chromium -incognito
-
 
 # Window Focus (vim)
 bindsym $mod+Tab focus right
@@ -48,7 +38,6 @@ bindsym $mod+Shift+k move up 30px
 bindsym $mod+Shift+l move right 30px
 bindsym $mod+Shift+Right move workspace to output right
 bindsym $mod+Shift+Down move container to output right
-
 
 # Window Resize
 bindsym $mod+Mod1+h resize shrink width 30 px or 10 ppt
@@ -74,7 +63,6 @@ bindsym $mod+equal scratchpad show
 bindsym $mod+slash bar mode invisible
 bindsym $mod+shift+slash bar mode dock
 
-
 # Misc
 bindsym $mod+Shift+C reload
 bindsym $mod+Shift+R restart
@@ -88,7 +76,6 @@ bindsym XF86AudioMute exec --no-startup-id pamixer -t && pkill -RTMIN+10 i3block
 bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5 -u && pkill -RTMIN+10 i3blocks
 bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5 -u && pkill -RTMIN+10 i3blocks
 
-
 bindsym XF86AudioPlay exec --no-startup-id playerctl-cmus play-pause
 bindsym XF86AudioPause exec --no-startup-id playerctl-cmus pause
 bindsym XF86AudioNext exec --no-startup-id playerctl-cmus next
@@ -101,13 +88,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10
 
 bindsym $mod+F5 exec --no-startup-id ~/.i3/scripts/touchpad.sh
 
-## End General Keybindings
-#######################################
-
-
-#######################################
-## Workspace
-
+# Workspace
 # Terminal
 set $ws1 "1:&#xe1ef;"
 # Browser
@@ -122,8 +103,7 @@ set $ws5 "5:&#xe00f;"
 set $ws6 "6:&#xe19f;"
 set $ws7 "7:&#xe1d5;"
 #set $ws8 mail
-set $ws9 "9"
-
+#set $ws9 "9"
 set $ws10 "10:"
 
 # Workspace keybinding
@@ -135,7 +115,7 @@ bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 #bindsym $mod+8 workspace $ws8
-bindsym $mod+9 workspace $ws9
+#bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
 # Move to workspace
@@ -147,7 +127,7 @@ bindsym $mod+Shift+5 move container to workspace $ws5
 bindsym $mod+Shift+6 move container to workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7
 #bindsym $mod+Shift+8 move container to workspace $ws8
-bindsym $mod+Shift+9 move container to workspace $ws9
+#bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 # Specific window
@@ -179,35 +159,9 @@ assign [class="(?i)pcmanfm"] $ws5
 assign [class="(?i)bomi|mcomix|baka-mplayer|mpv|viewnior|vimiv"] $ws4
 assign [class="(?i)qpdfview|gedit|subl3|mupdf|apvlv|zathura|fbreader"] $ws7
 
-## End Workspace
-#######################################
 
 
 
-#######################################
-## Mode system
-
-#set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
-#mode "$mode_system" {
-#	bindsym l exec --no-startup-id $HOME/.i3/script/i3exit lock, mode "default"
-#	bindsym e exec --no-startup-id $HOME/.i3/script/i3exit logout, mode "default"
-#	bindsym s exec --no-startup-id $HOME/.i3/script/i3exit suspend, mode "default"
-#	bindsym h exec --no-startup-id $HOME/.i3/script/i3exit hibernate, mode "default"
-#	bindsym r exec --no-startup-id $HOME/.i3/script/i3exit reboot, mode "default"
-#	bindsym Shift+s exec --no-startup-id $HOME/.i3/script/i3exit shutdown, mode "default"  
-
-#	# back to normal: Enter or Escape
-#	bindsym Return mode "default"
-#	bindsym Escape mode "default"
-#}
-#bindsym $mod+Shift+Q mode "$mode_system"
-
-## End Mode system
-#######################################
-
-
-
-#######################################
 ## i3bar
 
 bar {
@@ -231,13 +185,7 @@ bar {
 	}
 }
 
-## End i3 bar
-#######################################
-
-
-
-#######################################
-## Color
+# Color
 
 set $cbg "#145ba7"
 set $ccolor "#f8fcff"
@@ -250,19 +198,9 @@ client.unfocused        $cbg    $cunfo  $ccolor #fa4949   $cunfo
 client.urgent           $cbg    $cunfo  $ccolor #292d2e   $cunfo
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
-## End color
-#######################################
-
-
-
-#######################################
-## Startup
+# Startup
 
 exec_always --no-startup-id sh ~/.fehbg &
 exec --no-startup-id compton -b &
-#exec --no-startup-id pulseaudio --start
 exec --no-startup-id ~/.i3/scripts/touchpad.sh &
 exec --no-startup-id tmux new-session -s rzwei -d
-
-## End General Keybindings
-#######################################
