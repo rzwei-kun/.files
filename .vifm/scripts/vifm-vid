@@ -1,0 +1,5 @@
+#!/bin/bash
+
+mediainfo "$1" | awk '{sub(/                   :/,":")}1' | egrep -vi \
+        '^.*(color|profile|matrix|transfer|gsst|gstd|variable|cabac|maximum|minimum|rate mode|chroma|position|id|refframes|tagged|title|setting|source).*\s.*:'
+

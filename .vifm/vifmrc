@@ -1,0 +1,127 @@
+colorscheme solarized-dark
+set vicmd=vim
+set trashdir=~/.local/share/Trash
+set vifminfo+=tui
+set number
+set relativenumber
+set wildmenu
+set smartcase
+set timeoutlen=2000
+set wildstyle=popup
+set ignorecase
+set smartcase
+set nohlsearch
+set incsearch
+set history=30
+
+filter VirtualBox\ VMs
+set slowfs=curlftpfs
+
+set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
+    \phistory,fhistory,dirstack,registers,bookmarks,bmarks
+
+nmap ; :
+vmap ; :
+nnoremap w :view<cr>
+nmap <Delete> DD
+nnoremap ,c :source $MYVIFMRC<cr>
+nnoremap <C-l> :file<cr>
+nnoremap ,t :!termite -r fileterminal &<cr>
+nnoremap I cw<c-a>
+nnoremap cc cw<c-u>
+nnoremap A cw
+nnoremap S :sort<cr>
+nnoremap O :invert o<cr>
+nmap bb :marks <cr>
+nmap yy :copy<cr>
+nmap xx :move<cr>
+
+
+" Web Browser
+filetype *.html,*.htm,*.mhtml
+    \ chromium %f > /dev/null 2>&1 &
+
+" Image
+filetype <image/*>
+    \ vimiv %f > /dev/null 2>&1 &
+fileviewer <image/*>
+    \ vifm-imgp %px %py %pw %ph %c
+    \ vifm-imgc %px %py %pw %ph
+
+" Audio
+fileviewer <audio/*>
+    \ vifm-mp3 %c
+
+" Video
+filetype *.mp4,*.flv,*.mkv
+    \ bomi %f > /dev/null 2>&1 &
+fileviewer <video/*> vifm-vid %c
+
+" PDF 
+filextype <application/pdf>  pdf %f > /dev/null 2>&1 &
+fileviewer *.pdf  pdftotext -nopgbrk %c -    
+
+filetype *.epub FBReader %f > /dev/null 2>&1 &
+
+" FuseZipMount
+filetype *.zip,*.jar,*.war,*.ear,*.oxt,*.apkg
+    \ {Mount with fuse-zip}
+    \ FUSE_MOUNT|fuse-zip %SOURCE_FILE %DESTINATION_DIR,
+    \ {View contents}
+    \ zip -sf %c | less,
+    \ {Extract here}
+    \ tar -xf %c,
+    \ {Comix}
+    \ mcomix %c &
+fileviewer *.zip,*.jar,*.war,*.ear,*.oxt zip -sf %c
+
+" ArchiveMount
+filetype *.tar,*.tar.bz2,*.tbz2,*.tgz,*.tar.gz,*.tar.xz,*.txz
+    \ {Mount with archivemount}
+    \ FUSE_MOUNT|archivemount %SOURCE_FILE %DESTINATION_DIR,
+fileviewer *.tgz,*.tar.gz tar -tzf %c
+fileviewer *.tar.bz2,*.tbz2 tar -tjf %c
+fileviewer *.tar.txz,*.txz xz --list %c
+fileviewer *.tar tar -tf %c
+
+" Rar2FsMount and rar archives
+filetype *.rar
+    \ {Mount with rar2fs}
+    \ FUSE_MOUNT|rar2fs %SOURCE_FILE %DESTINATION_DIR,
+fileviewer *.rar unrar v %c
+
+" Fuse7z and 7z archives
+filetype *.7z
+       \ {Mount with fuse-7z}
+       \ FUSE_MOUNT|fuse-7z %SOURCE_FILE %DESTINATION_DIR,
+fileviewer *.7z 7z i %c
+
+" FtpMount
+filetype *.ftp
+       \ {Mount with CurlFtpFS}
+       \ FUSE_MOUNT2|curlftpfs -o ftp_port=-,,disable_eprt %PARAM %DESTINATION_DIR %CLEAR,
+
+" various file names
+set classify=' ::*::'
+set classify=' ::*.sh::, ::/^copying|license|credits$/::, ::.git,,*.git::, ::*.epub,,*.fb2,,*.djvu::, ::*.htm,,*.html,,*.mhtml,,*.xml::'
+
+" Archive
+set classify+=' ::*.7z,,*.ace,,*.arj,,*.bz2,,*.cpio,,*.deb,,*.dz,,*.gz,,*.jar,,*.lzh,,*.lzma,,*.rar,,*.rpm,,*.rz,,*.tar,,*.taz,,*.tb2,,*.tbz,,*.tbz2,,*.tgz,,*.tlz,,*.trz,,*.txz,,*.tz,,*.tz2,,*.xz,,*.z,,*.zip,,*.zoo::'
+
+" Images
+set classify+=' ::*.bmp,,*.gif,,*.jpeg,,*.jpg,,*.ico,,*.png,,*.ppm,,*.svg,,*.svgz,,*.tga,,*.tif,,*.tiff,,*.xbm,,*.xcf,,*.xpm,,*.xspf,,*.xwd::'
+
+" Documents Icon 
+set classify+=' ::*.pdf,,*.docx,,.xls,,*.xls[mx],,*.pptx,,*.ppt,,*.md,,*.txt::'
+set classify+=' ::<text/plain>::'
+
+" Media
+set classify+=' ::*.mp3,,*.flac,,*.wav::'
+set classify+=' ::*.mp4,,*.mkv,,*.flv::'
+
+set classify+=' :dir:, ::..::'
+set classify+=' :exe:'
+
+fileviewer .*/,*/ ls %c --group-directories-first -p --color
+
+set statusline="  %t%= %A %10u:%-7g %15E %20d  "

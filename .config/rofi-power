@@ -1,0 +1,3 @@
+LAUNCHER="rofi -width 20 -lines 4 -dmenu -i -p Power:"
+USE_LOCKER="true"
+LOCKER="~/.i3/scripts/lock.sh"
