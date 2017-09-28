@@ -1,4 +1,4 @@
-colorscheme solarized-dark
+colorscheme g80
 set vicmd=vim
 set trashdir=~/.local/share/Trash
 set vifminfo+=tui
@@ -13,6 +13,8 @@ set smartcase
 set nohlsearch
 set incsearch
 set history=30
+set viewcolumns=-{name}..,6{size}
+
 
 filter VirtualBox\ VMs
 set slowfs=curlftpfs

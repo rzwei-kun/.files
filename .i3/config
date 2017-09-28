@@ -1,5 +1,4 @@
 # General
-
 set $mod Mod4
 font pango:Misc Termsyn, Wuncon Siji 
 new_window pixel 3
@@ -7,31 +6,31 @@ focus_follows_mouse  yes
 floating_modifier $mod
 workspace_auto_back_and_forth yes
 
-# Gaps
-gaps inner 0
-gaps outer 5
+## Gaps
+gaps inner 4
+gaps outer 4
 smart_gaps on
 smart_borders on
 
 
 # Keybindings
-# Quick Launch
-bindsym $mod+Return exec --no-startup-id termite
-bindsym $mod+Shift+Return exec --no-startup-id termite -e "tmux attach -t rzwei"
-bindsym $mod+Shift+t exec --no-startup-id termite -e htop -t htop
-bindsym $mod+d exec --no-startup-id rofi -show drun -p "Run:"
-bindsym $mod+p exec --no-startup-id termite -r "filemanager" -e vifm
-bindsym $mod+b exec --no-startup-id chromium
-bindsym $mod+Shift+b exec --no-startup-id chromium -incognito
+## Quick Launch
+bindsym $mod+Return exec --no-startup-id "termite"
+bindsym $mod+Shift+Return exec --no-startup-id "termite -e 'tmux attach -t rzwei'"
+bindsym $mod+Shift+t exec --no-startup-id "termite -e htop -t htop "
+bindsym $mod+d exec --no-startup-id "rofi -show drun"
+bindsym $mod+p exec --no-startup-id "termite -r 'filemanager' -t 'Vifm' -e vifm"
+bindsym $mod+b exec --no-startup-id "chromium"
+bindsym $mod+Shift+b exec --no-startup-id "chromium -incognito"
 
-# Window Focus (vim)
+## Window Focus (vim)
 bindsym $mod+Tab focus right
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 
-# Window Move
+## Window Move
 bindsym $mod+Shift+h move left 30px
 bindsym $mod+Shift+j move down 30px
 bindsym $mod+Shift+k move up 30px
@@ -39,13 +38,13 @@ bindsym $mod+Shift+l move right 30px
 bindsym $mod+Shift+Right move workspace to output right
 bindsym $mod+Shift+Down move container to output right
 
-# Window Resize
+## Window Resize
 bindsym $mod+Mod1+h resize shrink width 30 px or 10 ppt
 bindsym $mod+Mod1+j resize shrink height 30 px or 10 ppt
 bindsym $mod+Mod1+k resize grow height 30 px or 10 ppt
 bindsym $mod+Mod1+l resize grow width 30 px or 10 ppt 
 
-# Tiling
+## Tiling
 bindsym $mod+y split h
 bindsym $mod+u split v
 bindsym $mod+g split toggle
@@ -63,50 +62,52 @@ bindsym $mod+equal scratchpad show
 bindsym $mod+slash bar mode invisible
 bindsym $mod+shift+slash bar mode dock
 
-# Misc
+## Misc
 bindsym $mod+Shift+C reload
 bindsym $mod+Shift+R restart
 bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'Exiting i3' -b 'Yeah' 'i3-msg exit'"
-bindsym $mod+Shift+q exec --no-startup-id ~/.i3/scripts/power.sh
-bindsym Print exec --no-startup-id scrot -z '%y%m%d%H%m%S.png' -e 'mv $f ~/pictures/scrots/'
-bindsym Mod1+l exec --no-startup-id ~/.i3/scripts/lock.sh
+bindsym $mod+Shift+q exec --no-startup-id "~/.i3/scripts/power.sh"
+bindsym Print exec --no-startup-id "scrot -z '%y%m%d%H%m%S.png' -e 'mv $f ~/pictures/scrots/'"
+bindsym Mod1+l exec --no-startup-id "~/.i3/scripts/lock.sh"
 
-# Pulse Audio
-bindsym XF86AudioMute exec --no-startup-id pamixer -t && pkill -RTMIN+10 i3blocks
-bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5 -u && pkill -RTMIN+10 i3blocks
-bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5 -u && pkill -RTMIN+10 i3blocks
+## Audio
+bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer -Mq set Master,0 5%+ unmute"
+bindsym XF86AudioLowerVolume exec --no-startup-id "amixer -Mq set Master,0 5%- unmute"
+bindsym XF86AudioMute exec --no-startup-id "pamixer -t"
 
-bindsym XF86AudioPlay exec --no-startup-id playerctl-cmus play-pause
-bindsym XF86AudioPause exec --no-startup-id playerctl-cmus pause
-bindsym XF86AudioNext exec --no-startup-id playerctl-cmus next
-bindsym XF86AudioPrev exec --no-startup-id playerctl-cmus previous
+bindsym XF86AudioPlay exec --no-startup-id "cmus-remote -u"
+bindsym XF86AudioNext exec --no-startup-id "cmus-remote -n"
+bindsym XF86AudioPrev exec --no-startup-id "cmus-remote -r"
+
+## Brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id "light -A 10"
+bindsym XF86MonBrightnessDown exec --no-startup-id "light -U 10" 
+
+## Cursor
+bindsym $mod+F5 exec --no-startup-id "~/.i3/scripts/touchpad.sh"
 
 
-# Brightness
-bindsym XF86MonBrightnessUp exec --no-startup-id light -A 10
-bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10 
-
-bindsym $mod+F5 exec --no-startup-id ~/.i3/scripts/touchpad.sh
 
 # Workspace
-# Terminal
-set $ws1 "1:&#xe1ef;"
-# Browser
-set $ws2 "2:&#xe1a0;"
-# Lab
-set $ws3 "3:&#xe1bf;"
-# Media
-set $ws4 "4:&#xe1eb;"
-# System
-set $ws5 "5:&#xe00f;"
-# Mailing
-set $ws6 "6:&#xe19f;"
-set $ws7 "7:&#xe1d5;"
+## Terminal
+set $ws1 "1: TTY"
+## Browser
+set $ws2 "2: WEB"
+## Lab
+set $ws3 "3: LAB"
+## Media
+set $ws4 "4: MED"
+## System
+set $ws5 "5: SYS"
+## Mailing
+set $ws6 "6: COM"
+## Doc
+set $ws7 "7: DOC"
 #set $ws8 mail
 #set $ws9 "9"
-set $ws10 "10:"
+set $ws10 "10: MON"
 
-# Workspace keybinding
+## Workspace keybinding
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
@@ -118,7 +119,7 @@ bindsym $mod+7 workspace $ws7
 #bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
-# Move to workspace
+## Move to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
@@ -130,7 +131,7 @@ bindsym $mod+Shift+7 move container to workspace $ws7
 #bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
-# Specific window
+## Specific window
 for_window [title="(?i)terminal-file"] floating enable, resize set 600 300, move position cursor
 for_window [window_role="pop-up|bubble|task_dialog|Preferences"] floating enable
 for_window [window_type="dialog|menu"] floating enable
@@ -146,8 +147,7 @@ for_window [workspace=$ws2] layout tabbed
 for_window [workspace=$ws6] layout tabbed
 for_window [workspace=$ws7] layout tabbed
 
-# Specific workspaces
-assign [class="(?i)messenger for desktop"] $ws6
+## Specific workspaces
 assign [window_role="telnet"] $ws3
 assign [title="htop"] $ws10
 assign [window_role="filemanager"] $ws5
@@ -155,52 +155,27 @@ assign [class="(?i)telegram"] $ws6
 assign [window_role="browser"] $ws2
 assign [class="(?i)st|termite"] $ws1
 assign [class="(?i)gns3|securecrt"] $ws3
-assign [class="(?i)pcmanfm"] $ws5
-assign [class="(?i)bomi|mcomix|baka-mplayer|mpv|viewnior|vimiv"] $ws4
+assign [class="(?i)bomi|mcomix|baka-mplayer|mpv|viewnior|vimiv|gimp-2.8"] $ws4
 assign [class="(?i)qpdfview|gedit|subl3|mupdf|apvlv|zathura|fbreader"] $ws7
 
 
-
-
-## i3bar
-
-bar {
-	position bottom
-	workspace_buttons yes
-	strip_workspace_numbers no
-	status_command i3blocks -c ~/.i3/i3blocks.conf
-
-	colors {
-		set $bg "#1d2860"
-		set $color "#f8fcff"
-
-		background $bg
-		statusline $color
-		separator $bg
-
-		focused_workspace  $bg #145ba7 $color
-		inactive_workspace $bg #1d2860 $color
-		urgent_workspace   #222222 #222222 $color
-		binding_mode       #222222 #222222 $color
-	}
-}
-
 # Color
-
-set $cbg "#145ba7"
-set $ccolor "#f8fcff"
-set $cunfo "#8a9db1"
+set $cbg "#f26262"
+set $ccolor "#efebe0"
+set $cunfo "#cb8b8b"
+set $cindi "#145ba7"
+set $cindiu "#8a9db1"
 
 #<colorclass>           <border> <background> <text> <indicator> <child_border>
-client.focused          $cbg    $cbg    $ccolor #FA4949   $cbg
-client.focused_inactive $cbg    $cunfo  $ccolor #Fa4949   $cunfo
-client.unfocused        $cbg    $cunfo  $ccolor #fa4949   $cunfo
-client.urgent           $cbg    $cunfo  $ccolor #292d2e   $cunfo
-client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+client.focused          $cbg    $cbg    $ccolor $cindi   $cbg
+client.focused_inactive $cbg    $cunfo  $ccolor $cindiu   $cunfo
+client.unfocused        $cbg    $cunfo  $ccolor $cindiu   $cunfo
+client.urgent           $cbg    $cunfo  $ccolor $cindi   $cunfo
 
 # Startup
-
-exec_always --no-startup-id sh ~/.fehbg &
-exec --no-startup-id compton -b &
-exec --no-startup-id ~/.i3/scripts/touchpad.sh &
-exec --no-startup-id tmux new-session -s rzwei -d
+exec_always --no-startup-id "sh ~/.fehbg &"
+exec_always --no-startup-id "sh ~/.config/polybar/launch.sh momiji"
+exec --no-startup-id "compton -b &"
+exec --no-startup-id "~/.i3/scripts/touchpad.sh &"
+#exec --no-startup-id "tmux new-session -s rzwei -d"
+exec --no-startup-id "ibus-daemon -d &"

@@ -3,6 +3,9 @@ export ZSH=/home/rzwei/.oh-my-zsh
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/bin/core_perl"
 export TERM=xterm-termite
 export VISUAL=vim
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
 
 
 ## VAR
@@ -13,7 +16,7 @@ source $ZSH/oh-my-zsh.sh
 
 
 ## START
-eval `dircolors ~/.dir_colors`
+# eval `dircolors ~/.dir_colors`
 eval 'bindkey "^D" kill-word'
 
 

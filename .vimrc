@@ -1,6 +1,6 @@
 " Some random stuff
 syntax enable
-colorscheme solarized
+colorscheme autumn
 set background=dark
 set t_Co=256
 set encoding=utf-8
@@ -104,7 +104,7 @@ set noshowmode
 cnoremap <expr> <Space> ambicmd#expand("\<Space>")
 cnoremap <expr> <CR>    ambicmd#expand("\<CR>")
 
-let g:lightline = {'colorscheme':'wombat'}
+let g:lightline = {'colorscheme':'seoul256'}
 autocmd VimEnter * redrawstatus!     
 set showcmd
 
