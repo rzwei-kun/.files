@@ -22,12 +22,12 @@ set slowfs=curlftpfs
 set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
     \phistory,fhistory,dirstack,registers,bookmarks,bmarks
 
-nmap ; :
-vmap ; :
+map ; :
 nnoremap w :view<cr>
 nmap <Delete> DD
 nnoremap ,c :source $MYVIFMRC<cr>
 nnoremap <C-l> :file<cr>
+nnoremap <C-h> :history<cr>
 nnoremap ,t :!termite -r fileterminal &<cr>
 nnoremap I cw<c-a>
 nnoremap cc cw<c-u>
@@ -35,8 +35,8 @@ nnoremap A cw
 nnoremap S :sort<cr>
 nnoremap O :invert o<cr>
 nmap bb :marks <cr>
-nmap yy :copy<cr>
-nmap xx :move<cr>
+map yy :copy<cr>
+map xx :move<cr>
 
 
 " Web Browser
@@ -55,8 +55,8 @@ fileviewer <audio/*>
     \ vifm-mp3 %c
 
 " Video
-filetype *.mp4,*.flv,*.mkv
-    \ bomi %f > /dev/null 2>&1 &
+" filetype <video/*>  mpv --player-operation-mode=pseudo-gui -- %f &
+filetype <video/*> smplayer %f &
 fileviewer <video/*> vifm-vid %c
 
 " PDF 
@@ -72,7 +72,7 @@ filetype *.zip,*.jar,*.war,*.ear,*.oxt,*.apkg
     \ {View contents}
     \ zip -sf %c | less,
     \ {Extract here}
-    \ tar -xf %c,
+    \ unzip -q %c,
     \ {Comix}
     \ mcomix %c &
 fileviewer *.zip,*.jar,*.war,*.ear,*.oxt zip -sf %c
@@ -90,6 +90,8 @@ fileviewer *.tar tar -tf %c
 filetype *.rar
     \ {Mount with rar2fs}
     \ FUSE_MOUNT|rar2fs %SOURCE_FILE %DESTINATION_DIR,
+    \ {Comix}
+    \ mcomix %c &
 fileviewer *.rar unrar v %c
 
 " Fuse7z and 7z archives

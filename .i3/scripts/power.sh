@@ -35,10 +35,7 @@ then
         systemctl poweroff
         ;;
       Suspend)
-        systemctl suspend; ~/.i3/scripts/lock.sh; 
-        ;;
-      Hibernate)
-        $($USE_LOCKER) && "$LOCKER"; systemctl hibernate
+        ~/.i3/scripts/lock;systemctl suspend;  
         ;;
       *)
         ;;

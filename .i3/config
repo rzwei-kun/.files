@@ -7,8 +7,8 @@ floating_modifier $mod
 workspace_auto_back_and_forth yes
 
 ## Gaps
-gaps inner 4
-gaps outer 4
+gaps inner 20
+gaps outer 20
 smart_gaps on
 smart_borders on
 
@@ -16,7 +16,7 @@ smart_borders on
 # Keybindings
 ## Quick Launch
 bindsym $mod+Return exec --no-startup-id "termite"
-bindsym $mod+Shift+Return exec --no-startup-id "termite -e 'tmux attach -t rzwei'"
+# bindsym $mod+Shift+Return exec --no-startup-id "termite -e 'tmux attach -t rzwei'"
 bindsym $mod+Shift+t exec --no-startup-id "termite -e htop -t htop "
 bindsym $mod+d exec --no-startup-id "rofi -show drun"
 bindsym $mod+p exec --no-startup-id "termite -r 'filemanager' -t 'Vifm' -e vifm"
@@ -67,17 +67,17 @@ bindsym $mod+Shift+C reload
 bindsym $mod+Shift+R restart
 bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'Exiting i3' -b 'Yeah' 'i3-msg exit'"
 bindsym $mod+Shift+q exec --no-startup-id "~/.i3/scripts/power.sh"
-bindsym Print exec --no-startup-id "scrot -z '%y%m%d%H%m%S.png' -e 'mv $f ~/pictures/scrots/'"
-bindsym Mod1+l exec --no-startup-id "~/.i3/scripts/lock.sh"
+bindsym Print exec --no-startup-id "scrot -z '%y%m%d%H%m%S.png' -e 'mv $f ~/Pictures/scrots/'"
+bindsym Mod1+l exec --no-startup-id "~/.i3/scripts/lock"
 
 ## Audio
 bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer -Mq set Master,0 5%+ unmute"
 bindsym XF86AudioLowerVolume exec --no-startup-id "amixer -Mq set Master,0 5%- unmute"
 bindsym XF86AudioMute exec --no-startup-id "pamixer -t"
 
-bindsym XF86AudioPlay exec --no-startup-id "cmus-remote -u"
-bindsym XF86AudioNext exec --no-startup-id "cmus-remote -n"
-bindsym XF86AudioPrev exec --no-startup-id "cmus-remote -r"
+# bindsym XF86AudioPlay exec --no-startup-id "cmus-remote -u"
+# bindsym XF86AudioNext exec --no-startup-id "cmus-remote -n"
+# bindsym XF86AudioPrev exec --no-startup-id "cmus-remote -r"
 
 ## Brightness
 bindsym XF86MonBrightnessUp exec --no-startup-id "light -A 10"
@@ -139,7 +139,6 @@ for_window [window_role="browser|GtkFileChooserDialog"] resize set 800 600, move
 for_window [class="(?i)pavucontrol|lxappearance|xarchiver|kamus"] floating enable
 for_window [window_role="(?i)filemanager"] floating enable, resize set 1280 600, move position center, focus
 for_window [class="(?i)st|termite|viewnior|chromium|bomi|vimiv"] focus
-for_window [class="(?i)bomi"] floating enable, resize set 848 500, move position center
 for_window [class="(?i)securecrt|wireshark-gtk"] floating enable, border pixel 2
 for_window [class="(?i)securecrt"] move window to scratchpad, scratchpad show
 for_window [window_role="telnet"] move window to scratchpad, scratchpad show, floating enable, border pixel 0, resize set 1366 250, move absolute position 0 518
@@ -151,11 +150,11 @@ for_window [workspace=$ws7] layout tabbed
 assign [window_role="telnet"] $ws3
 assign [title="htop"] $ws10
 assign [window_role="filemanager"] $ws5
-assign [class="(?i)telegram"] $ws6
+assign [class="(?i)telegram|irssi"] $ws6
 assign [window_role="browser"] $ws2
 assign [class="(?i)st|termite"] $ws1
-assign [class="(?i)gns3|securecrt"] $ws3
-assign [class="(?i)bomi|mcomix|baka-mplayer|mpv|viewnior|vimiv|gimp-2.8"] $ws4
+assign [class="(?i)gns3|securecrt|wireshark-gtk"] $ws3
+assign [class="(?i)mcomix|mpv|vimiv|gimp-2.8|smplayer"] $ws4
 assign [class="(?i)qpdfview|gedit|subl3|mupdf|apvlv|zathura|fbreader"] $ws7
 
 
