@@ -16,7 +16,7 @@ set history=30
 set viewcolumns=-{name}..,6{size}
 
 
-filter VirtualBox\ VMs
+filter VirtualBox\ VMs|lost\\+found
 set slowfs=curlftpfs
 
 set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
@@ -34,6 +34,7 @@ nnoremap cc cw<c-u>
 nnoremap A cw
 nnoremap S :sort<cr>
 nnoremap O :invert o<cr>
+nnoremap oo :sync %c<cr><tab>
 nmap bb :marks <cr>
 map yy :copy<cr>
 map xx :move<cr>

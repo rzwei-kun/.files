@@ -154,6 +154,7 @@ let g:user_emmet_install_global = 0
 
 autocmd FileType html,css EmmetInstall
 autocmd FIleType html,css,php colorscheme deus
+au BufRead,BufNewFile *.md setlocal textwidth=80
 
 let g:user_emmet_leader_key = '<c-e>'
 

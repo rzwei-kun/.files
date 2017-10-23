@@ -6,10 +6,11 @@ export VISUAL=vim
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
+export PYTHONSTARTUP="/home/rzwei/.pythonrc"
 
 
 ## VAR
-plugins=(history wd vi-mode )
+plugins=(history wd vi-mode git)
 ZSH_TMUX_AUTOSTART=true
 ZSH_THEME="ys"
 source $ZSH/oh-my-zsh.sh
@@ -25,12 +26,14 @@ alias s='sudo'
 alias p='s pacman'
 alias pi='s pacman -S'
 alias pr='s pacman -R'
+alias pa='pacaur -S'
 alias y='yaourt'
 alias dg='downgrade'
 alias wm='s wifi-menu'
 alias sw='s netctl stop-all'
 alias ch='rm ~/.zsh_history'
 alias bat='s tlp bat'
+alias ac='s tlp ac'
 alias v='vim'
 alias sv='s vim'
 alias pingg='ping 8.8.8.8 -s 0'
@@ -41,3 +44,4 @@ alias usmount='s mount -o uid=rzwei,gid=wheel'
 alias umount='s umount'
 alias netctl='s netctl'
 alias sctl='s systemctl'
+alias mac='s macchanger'
