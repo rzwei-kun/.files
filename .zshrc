@@ -6,7 +6,6 @@ export VISUAL=vim
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
-export PYTHONSTARTUP="/home/rzwei/.pythonrc"
 
 
 ## VAR
@@ -45,3 +44,4 @@ alias umount='s umount'
 alias netctl='s netctl'
 alias sctl='s systemctl'
 alias mac='s macchanger'
+alias il='s ip link set'

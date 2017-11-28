@@ -1,6 +1,6 @@
-" Some random stuff
+ "Some random stuff
 syntax enable
-colorscheme autumn
+colorscheme deus
 set background=dark
 set t_Co=256
 set encoding=utf-8
@@ -94,6 +94,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'tmhedberg/matchit'
 Plugin 'StanAngeloff/php.vim'
+Plugin 'ajmwagar/vim-dues'
 
 call vundle#end()
 filetype plugin indent on
@@ -101,8 +102,8 @@ filetype plugin indent on
 set laststatus=2
 set noshowmode
 
-cnoremap <expr> <Space> ambicmd#expand("\<Space>")
-cnoremap <expr> <CR>    ambicmd#expand("\<CR>")
+" cnoremap <expr> <Space> ambicmd#expand("\<Space>")
+" cnoremap <expr> <CR>    ambicmd#expand("\<CR>")
 
 let g:lightline = {'colorscheme':'seoul256'}
 autocmd VimEnter * redrawstatus!     

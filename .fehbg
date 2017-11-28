@@ -1,2 +1,2 @@
 #!/bin/sh
-'feh' '--bg-fill' '.background.jpg' 
+feh  --bg-fill '/home/rzwei/.background.jpg' 
