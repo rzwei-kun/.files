@@ -23,6 +23,7 @@ bindsym $mod+p exec --no-startup-id "termite -r 'filemanager' -t 'Vifm' -e vifm"
 bindsym $mod+b exec --no-startup-id "chromium"
 bindsym $mod+m exec --no-startup-id "smplayer"
 bindsym $mod+Shift+b exec --no-startup-id "chromium -incognito"
+bindsym $mod+Ctrl+b exec --no-startup-id "chromium --restore-last-session"
 
 ## Window Focus (vim)
 bindsym $mod+Tab focus right
@@ -146,7 +147,7 @@ for_window [window_role="(?i)filemanager"] floating enable, resize set 1280 600,
 for_window [class="(?i)termite|viewnior|chromium|bomi|vimiv"] focus
 for_window [class="(?i)securecrt|wireshark-gtk"] floating enable, border pixel 2
 for_window [class="(?i)securecrt"] move window to scratchpad, scratchpad show
-for_window [window_role="telnet"] move window to scratchpad, scratchpad show, floating enable, border pixel 0, resize set 1366 250, move absolute position 0 518
+for_window [title="telnetg"] move window to scratchpad, scratchpad show, floating enable, border pixel 0, resize set 1366 250, move absolute position 0 518
 for_window [class="poi" window_role="devtools"] floating enable, border pixel 0, resize set 800 190, move absolute position 0 574 
 for_window [workspace=$ws2] layout tabbed
 for_window [workspace=$ws6] layout tabbed
@@ -155,7 +156,7 @@ for_window [workspace=$ws9] layout tabbed
 
 ## Specific workspaces
 assign [class="(?i)poi"] $ws9
-assign [window_role="telnet"] $ws3
+assign [title="telnetg"] $ws3
 assign [title="htop"] $ws10
 assign [window_role="filemanager"] $ws5
 assign [class="(?i)telegram|irssi"] $ws6
@@ -182,9 +183,9 @@ client.urgent           $cbg    $cunfo  $ccolor $cindi   $cunfo
 
 # Startup
 exec_always --no-startup-id "sh ~/.fehbg &"
-exec --no-startup-id "sh ~/.config/polybar/launch.sh momiji"
+exec_always --no-startup-id "sh ~/.config/polybar/launch.sh momiji"
 exec --no-startup-id "compton -b &"
 exec --no-startup-id "~/.i3/scripts/touchpad.sh &"
 exec --no-startup-id "dunst -config ~/.config/dunst/dunstrc"
 #exec --no-startup-id "tmux new-session -s rzwei -d"
-# exec --no-startup-id "ibus-daemon -d &"
+exec --no-startup-id "ibus-daemon -d &"
