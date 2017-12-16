@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if ! tmux has-session -t GNS3; then
+    tmux new-session -s GNS3 -n "$1" -d
+else
+    tmux new-window -t GNS3 -n "$1"
+fi
+
+sleep 0.1
+tmux send-key -t GNS3 "telnet $2 $3" Enter Enter
+
+if ! pgrep -af "termite -t telnetg" > /dev/null; then
+    termite -t telnetg -e "tmux attach -t GNS3"
+fi
+
