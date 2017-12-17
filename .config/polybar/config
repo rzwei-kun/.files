@@ -7,12 +7,11 @@ white = #fff
 base = #efebe0
 ;brown = #51311a
 brown = #666
-orange = #fbb253
-orange2 = #ef7922
-purple = #e58a95
-red = #f1383d
+red = #cb8b82
 pink = #f26262
-pink2 = #f64d64
+blue = #508cb0
+blue2 = #537e8e
+gray = #aaa
 
 [bar/momiji]
 monitor = eDP-1
@@ -33,8 +32,8 @@ line-color = ${color.red}
 underline-size = 0
 overline-size = 0
 
-border-bottom-size = 3
-border-bottom-color = ${color.pink}
+border-bottom-size = 4
+border-bottom-color = ${color.blue}
 
 padding-left = 3
 padding-right = 3
@@ -65,11 +64,12 @@ strip-wsnumbers = true
 wrapping-scroll = false
 
 label-focused =%name%
-label-focused-foreground = ${color.pink}
+label-focused-foreground = ${color.blue2}
 label-focused-background = ${color.base}
 label-focused-padding = 1
 
 label-unfocused =%name%
+label-unfocused-foreground = ${color.gray}
 label-unfocused-padding = 1
 
 label-visible =%name%

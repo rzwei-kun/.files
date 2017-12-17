@@ -169,9 +169,9 @@ assign [class="(?i)qpdfview|gedit|subl3|mupdf|apvlv|zathura|fbreader|llpp"] $ws7
 
 
 # Color
-set $cbg "#f26262"
+set $cbg "#508cb0"
 set $ccolor "#efebe0"
-set $cunfo "#cb8b8b"
+set $cunfo "#2f5162"
 set $cindi "#145ba7"
 set $cindiu "#8a9db1"
 
