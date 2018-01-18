@@ -95,16 +95,7 @@ filetype *.rar
     \ mcomix %c &
 fileviewer *.rar unrar v %c
 
-" Fuse7z and 7z archives
-filetype *.7z
-       \ {Mount with fuse-7z}
-       \ FUSE_MOUNT|fuse-7z %SOURCE_FILE %DESTINATION_DIR,
 fileviewer *.7z 7z i %c
-
-" FtpMount
-filetype *.ftp
-       \ {Mount with CurlFtpFS}
-       \ FUSE_MOUNT2|curlftpfs -o ftp_port=-,,disable_eprt %PARAM %DESTINATION_DIR %CLEAR,
 
 " various file names
 set classify=' ::*::'

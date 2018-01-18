@@ -1,0 +1,66 @@
+# GIMP gimprc
+# 
+# This is your personal gimprc file.  Any variable defined in this file takes
+# precedence over the value defined in the system-wide gimprc:
+# /etc/gimp/2.0/gimprc
+# Most values can be set within GIMP by changing some options in the
+# Preferences dialog.
+
+(pattern-path-writable "/home/rzwei/.gimp-2.8/patterns")
+(palette-path-writable "/home/rzwei/.gimp-2.8/palettes")
+(gradient-path-writable "")
+(default-image
+    (width 640)
+    (height 400)
+    (unit pixels)
+    (xresolution 72.000000)
+    (yresolution 72.000000)
+    (resolution-unit inches)
+    (image-type rgb)
+    (fill-type transparent-fill)
+    (comment "Created with GIMP"))
+(default-grid
+    (style dots)
+    (fgcolor (color-rgba 0.000000 0.000000 0.000000 1.000000))
+    (bgcolor (color-rgba 1.000000 1.000000 1.000000 1.000000))
+    (xspacing 10.000000)
+    (yspacing 10.000000)
+    (spacing-unit inches)
+    (xoffset 0.000000)
+    (yoffset 0.000000)
+    (offset-unit inches))
+(undo-preview-size small)
+(default-view
+    (show-menubar yes)
+    (show-statusbar yes)
+    (show-rulers yes)
+    (show-scrollbars yes)
+    (show-selection yes)
+    (show-layer-boundary no)
+    (show-guides yes)
+    (show-grid no)
+    (show-sample-points yes)
+    (padding-mode custom)
+    (padding-color (color-rgb 0.360784 0.357955 0.357955)))
+(default-fullscreen-view
+    (show-menubar yes)
+    (show-statusbar yes)
+    (show-rulers yes)
+    (show-scrollbars yes)
+    (show-selection yes)
+    (show-layer-boundary no)
+    (show-guides yes)
+    (show-grid no)
+    (show-sample-points yes)
+    (padding-mode custom)
+    (padding-color (color-rgb 0.427451 0.427451 0.427451)))
+(default-snap-to-grid yes)
+(default-snap-to-canvas yes)
+(move-tool-changes-active yes)
+(save-device-status yes)
+(save-tool-options yes)
+(theme "Light Blue small")
+(user-manual-online yes)
+
+
+# end of gimprc

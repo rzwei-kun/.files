@@ -9,15 +9,18 @@ export QT_IM_MODULE=ibus
 
 
 ## VAR
-plugins=(history wd vi-mode git)
+plugins=(history wd vi-mode git zsh-autosuggestions)
 ZSH_TMUX_AUTOSTART=true
 ZSH_THEME="ys"
 source $ZSH/oh-my-zsh.sh
 
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=240'
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 
 ## START
 # eval `dircolors ~/.dir_colors`
 eval 'bindkey "^D" kill-word'
+bindkey '^ ' autosuggest-accept
 
 
 ## Aliases
@@ -47,3 +50,5 @@ alias mac='s macchanger'
 alias il='s ip link set'
 alias ia='s ip add add'
 alias hn='hugo new'
+# alias wine32='WINEARCH=win32 WINEPREFIX=~/.wine32 wine'
+# alias winetrick32='WINEARCH=win32 WINEPREFIX=~/.wine32 winetricks'

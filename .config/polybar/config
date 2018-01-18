@@ -9,8 +9,8 @@ base = #efebe0
 brown = #666
 red = #cb8b82
 pink = #f26262
-blue = #508cb0
-blue2 = #537e8e
+blue = #2f5162
+blue2 = #508cb0
 gray = #aaa
 
 [bar/momiji]
@@ -41,8 +41,9 @@ module-margin-left = 1
 module-margin-right = 2
 
 tray-position = right
-tray-padding = 0
+tray-padding = 2
 tray-maxsize = 16
+tray-background = ${color.base}
 
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
@@ -64,7 +65,7 @@ strip-wsnumbers = true
 wrapping-scroll = false
 
 label-focused =%name%
-label-focused-foreground = ${color.blue2}
+label-focused-foreground = ${color.blue}
 label-focused-background = ${color.base}
 label-focused-padding = 1
 

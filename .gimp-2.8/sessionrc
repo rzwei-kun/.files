@@ -1,0 +1,108 @@
+# GIMP sessionrc
+# 
+# This file takes session-specific info (that is info, you want to keep
+# between two GIMP sessions).  You are not supposed to edit it manually, but
+# of course you can do.  The sessionrc will be entirely rewritten every time
+# you quit GIMP.  If this file isn't found, defaults are used.
+
+(session-info "toplevel"
+    (factory-entry "gimp-empty-image-window")
+    (position 0 46)
+    (size 1366 722))
+(session-info "toplevel"
+    (factory-entry "gimp-single-image-window")
+    (position 0 46)
+    (size 1366 722)
+    (open-on-exit)
+    (aux-info
+        (left-docks-width "60")
+        (right-docks-width "222")
+        (maximized "no"))
+    (gimp-toolbox
+        (side left))
+    (gimp-dock
+        (side right)
+        (book
+            (current-page 2)
+            (dockable "gimp-navigation-view"
+                (tab-style automatic)
+                (aux-info
+                    (show-button-bar "true")))
+            (dockable "gimp-color-editor"
+                (tab-style automatic)
+                (aux-info
+                    (current-page "GimpColorSelect")))
+            (dockable "gimp-palette-list"
+                (tab-style automatic)
+                (aux-info
+                    (show-button-bar "true")))
+            (dockable "gimp-palette-editor"
+                (tab-style automatic)
+                (aux-info
+                    (show-button-bar "true")
+                    (edit-active "true")
+                    (current-data "Default")))
+            (dockable "gimp-tool-preset-list"
+                (tab-style automatic)
+                (aux-info
+                    (show-button-bar "true"))))
+        (book
+            (position 332)
+            (current-page 0)
+            (dockable "gimp-layer-list"
+                (locked)
+                (tab-style automatic)
+                (preview-size 32)
+                (aux-info
+                    (show-button-bar "true")))
+            (dockable "gimp-channel-list"
+                (locked)
+                (tab-style automatic)
+                (preview-size 32)
+                (aux-info
+                    (show-button-bar "true"))))))
+(session-info "toplevel"
+    (factory-entry "gimp-file-open-dialog")
+    (position 65 24)
+    (size 971 712))
+(session-info "toplevel"
+    (factory-entry "gimp-shear-tool-dialog")
+    (position 464 463))
+(session-info "toplevel"
+    (factory-entry "gimp-scale-tool-dialog")
+    (position 495 465))
+(session-info "toplevel"
+    (factory-entry "gimp-file-save-dialog")
+    (position 51 24)
+    (size 971 712))
+(session-info "toplevel"
+    (factory-entry "gimp-file-export-dialog")
+    (position 51 24)
+    (size 971 712))
+(session-info "toplevel"
+    (factory-entry "gimp-toolbox-color-dialog")
+    (position 51 170))
+(session-info "toplevel"
+    (factory-entry "gimp-preferences-dialog")
+    (position 414 81))
+(session-info "toplevel"
+    (factory-entry "gimp-image-new-dialog")
+    (position 463 220))
+(session-info "toplevel"
+    (factory-entry "gimp-rotate-tool-dialog")
+    (position 458 149))
+(session-info "toplevel"
+    (factory-entry "gimp-input-devices-dialog")
+    (position 80 24))
+(session-info "toplevel"
+    (factory-entry "gimp-color-balance-tool-dialog")
+    (position 244 0))
+(session-info "toplevel"
+    (factory-entry "gimp-brightness-contrast-tool-dialog")
+    (position 244 24))
+
+(hide-docks no)
+(single-window-mode yes)
+(last-tip-shown 0)
+
+# end of sessionrc
