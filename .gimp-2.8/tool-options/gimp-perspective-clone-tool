@@ -1,8 +1,11 @@
 # GIMP gimp-perspective-clone-tool options
 
-(brush "Clipboard")
-(dynamics "Dynamics Off")
+(foreground (color-rgb 1.000000 1.000000 1.000000))
+(background (color-rgb 0.925490 0.913725 0.874510))
+(brush "2. Hardness 100")
+(dynamics "Pressure Opacity")
 (pattern "Pine")
 (palette "Default")
+(brush-size 59.000000)
 
 # end of gimp-perspective-clone-tool options

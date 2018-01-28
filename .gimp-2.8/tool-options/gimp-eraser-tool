@@ -1,7 +1,8 @@
 # GIMP gimp-eraser-tool options
 
-(brush "Clipboard")
-(dynamics "Dynamics Off")
+(foreground (color-rgb 1.000000 0.647059 0.007843))
+(brush "2. Hardness 100")
+(dynamics "Pressure Opacity")
 (palette "Default")
 
 # end of gimp-eraser-tool options

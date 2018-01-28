@@ -146,7 +146,7 @@ for_window [window_role="browser|GtkFileChooserDialog"] resize set 800 600, move
 for_window [class="(?i)pavucontrol|lxappearance|xarchiver|kamus|Genymotion Player|player|crossover"] floating enable
 for_window [window_role="(?i)filemanager"] floating enable, resize set 1280 600, move position center, focus
 for_window [class="(?i)termite|viewnior|chromium|bomi|vimiv"] focus
-for_window [class="(?i)securecrt|wireshark-gtk|winbox.exe|mcomix|wine|flameshot|kbbi-qt|packettracer7"] floating enable
+for_window [class="(?i)securecrt|wireshark-gtk|winbox.exe|mcomix|wine|flameshot|kbbi-qt|packettracer7|virt-manager|vmware"] floating enable
 for_window [class="(?i)securecrt"] move window to scratchpad, scratchpad show
 for_window [title="telnetg"] move window to scratchpad, scratchpad show, floating enable, border pixel 0, resize set 1366 250, move absolute position 0 518
 for_window [class="poi" window_role="devtools"] floating enable, border pixel 0, resize set 800 190, move absolute position 0 574 
@@ -193,6 +193,7 @@ exec --no-startup-id "compton -b &"
 exec --no-startup-id "flameshot &"
 exec --no-startup-id "~/.i3/scripts/touchpad.sh &"
 exec --no-startup-id "dunst -config ~/.config/dunst/dunstrc"
-exec --no-startup-id "syndaemon -i 0.75"
+# exec --no-startup-id "sudo syndaemon -K -i 0.075"
+# exec --no-startup-id "buckle -f -g 20 &"
 #exec --no-startup-id "tmux new-session -s rzwei -d"
-# exec --no-startup-id "ibus-daemon -d &"
+exec --no-startup-id "ibus-daemon -d &"

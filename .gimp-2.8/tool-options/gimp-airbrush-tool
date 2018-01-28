@@ -1,8 +1,10 @@
 # GIMP gimp-airbrush-tool options
 
-(brush "2. Hardness 050")
+(foreground (color-rgb 0.419608 0.364706 0.549020))
+(brush "2. Hardness 100")
 (dynamics "Pressure Opacity")
 (gradient "FG to BG (RGB)")
 (palette "Default")
+(brush-size 1.000000)
 
 # end of gimp-airbrush-tool options

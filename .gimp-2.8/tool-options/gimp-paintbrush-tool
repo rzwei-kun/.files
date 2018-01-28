@@ -1,7 +1,10 @@
 # GIMP gimp-paintbrush-tool options
 
-(brush "Clipboard")
-(dynamics "Dynamics Off")
+(foreground (color-rgb 1.000000 1.000000 1.000000))
+(background (color-rgb 0.000000 0.000000 0.000000))
+(opacity 0.957000)
+(brush "2. Hardness 100")
+(dynamics "Pressure Opacity")
 (gradient "FG to BG (RGB)")
 (palette "Default")
 

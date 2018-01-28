@@ -57,7 +57,7 @@ fileviewer <audio/*>
 
 " Video
 " filetype <video/*>  mpv --player-operation-mode=pseudo-gui -- %f &
-filetype <video/*> smplayer %f &
+filetype <video/*> smplayer %f > /dev/null 2>&1 &
 fileviewer <video/*> vifm-vid %c
 
 " PDF 
