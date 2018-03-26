@@ -1,12 +1,9 @@
 # GIMP gimp-text-tool options
 
-(foreground (color-rgb 1.000000 0.647059 0.007843))
-(palette "Default")
+(foreground (color-rgb 0.576471 0.066667 0.098039))
+(palette "cisco")
 (font "Open Sans")
-(font-size 70.000000)
+(font-size 29.000000)
 (language "en")
-(justify center)
-(line-spacing -4.000000)
-(letter-spacing 40.000000)
 
 # end of gimp-text-tool options

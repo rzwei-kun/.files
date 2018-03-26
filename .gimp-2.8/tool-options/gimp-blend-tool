@@ -1,5 +1,7 @@
 # GIMP gimp-blend-tool options
 
+(foreground (color-rgb 0.015686 0.623529 0.850980))
+(background (color-rgb 0.988235 0.988235 0.988235))
 (gradient "FG to BG (RGB)")
 
 # end of gimp-blend-tool options

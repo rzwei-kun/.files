@@ -16,7 +16,7 @@ set history=30
 set viewcolumns=-{name}..,6{size}
 
 
-filter VirtualBox\ VMs|lost\\+found
+filter VirtualBox\ VMs|lost\\+found|Desktop
 set slowfs=curlftpfs
 
 set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
@@ -38,6 +38,11 @@ nnoremap oo :sync %c<cr><tab>
 nmap bb :marks <cr>
 map yy :copy<cr>
 map xx :move<cr>
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+
 
 
 " Web Browser
@@ -54,6 +59,7 @@ fileviewer <image/*>
 " Audio
 fileviewer <audio/*>
     \ vifm-mp3 %c
+filetype <audio/*>,*.mp3 mplayer %f
 
 " Video
 " filetype <video/*>  mpv --player-operation-mode=pseudo-gui -- %f &
@@ -98,26 +104,25 @@ fileviewer *.rar unrar v %c
 fileviewer *.7z 7z i %c
 
 " various file names
-set classify=' ::*::'
-set classify=' ::*.sh::, ::/^copying|license|credits$/::, ::.git,,*.git::, ::*.epub,,*.fb2,,*.djvu::, ::*.htm,,*.html,,*.mhtml,,*.xml::'
-
-" Archive
-set classify+=' ::*.7z,,*.ace,,*.arj,,*.bz2,,*.cpio,,*.deb,,*.dz,,*.gz,,*.jar,,*.lzh,,*.lzma,,*.rar,,*.rpm,,*.rz,,*.tar,,*.taz,,*.tb2,,*.tbz,,*.tbz2,,*.tgz,,*.tlz,,*.trz,,*.txz,,*.tz,,*.tz2,,*.xz,,*.z,,*.zip,,*.zoo::'
-
-" Images
-set classify+=' ::*.bmp,,*.gif,,*.jpeg,,*.jpg,,*.ico,,*.png,,*.ppm,,*.svg,,*.svgz,,*.tga,,*.tif,,*.tiff,,*.xbm,,*.xcf,,*.xpm,,*.xspf,,*.xwd::'
-
-" Documents Icon 
-set classify+=' ::*.pdf,,*.docx,,.xls,,*.xls[mx],,*.pptx,,*.ppt,,*.md,,*.txt::'
-set classify+=' ::<text/plain>::'
-
-" Media
-set classify+=' ::*.mp3,,*.flac,,*.wav::'
-set classify+=' ::*.mp4,,*.mkv,,*.flv::'
-
-set classify+=' :dir:, ::..::'
-set classify+=' :exe:'
-
-fileviewer .*/,*/ ls %c --group-directories-first -p --color
-
-set statusline="  %t%= %A %10u:%-7g %15E %20d  "
+"set classify=' ::*::'
+"set classify=' ::*.sh::, ::/^copying|license|credits$/::, ::.git,,*.git::, ::*.epub,,*.fb2,,*.djvu::, ::*.htm,,*.html,,*.mhtml,,*.xml::'
+" "" Archive
+"set classify+=' ::*.7z,,*.ace,,*.arj,,*.bz2,,*.cpio,,*.deb,,*.dz,,*.gz,,*.jar,,*.lzh,,*.lzma,,*.rar,,*.rpm,,*.rz,,*.tar,,*.taz,,*.tb2,,*.tbz,,*.tbz2,,*.tgz,,*.tlz,,*.trz,,*.txz,,*.tz,,*.tz2,,*.xz,,*.z,,*.zip,,*.zoo::'
+"
+"" Images
+"set classify+=' ::*.bmp,,*.gif,,*.jpeg,,*.jpg,,*.ico,,*.png,,*.ppm,,*.svg,,*.svgz,,*.tga,,*.tif,,*.tiff,,*.xbm,,*.xcf,,*.xpm,,*.xspf,,*.xwd::'
+"
+"" Documents Icon 
+"set classify+=' ::*.pdf,,*.docx,,.xls,,*.xls[mx],,*.pptx,,*.ppt,,*.md,,*.txt::'
+"set classify+=' ::<text/plain>::'
+"
+"" Media
+"set classify+=' ::*.mp3,,*.flac,,*.wav::'
+"set classify+=' ::*.mp4,,*.mkv,,*.flv::'
+"
+"set classify+=' :dir:, ::..::'
+"set classify+=' :exe:'
+"
+"fileviewer .*/,*/ ls %c --group-directories-first -p --color
+"
+"set statusline="  %t%= %A %10u:%-7g %15E %20d  "

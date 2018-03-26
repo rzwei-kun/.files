@@ -1,11 +1,12 @@
 # GIMP gimp-vector-tool options
 
-(foreground (color-rgb 1.000000 0.647059 0.007843))
+(foreground (color-rgb 0.909804 0.921569 0.945098))
+(background (color-rgb 0.015686 0.623529 0.850980))
 (brush "2. Hardness 100")
 (dynamics "Pressure Opacity")
 (pattern "Pine")
 (gradient "FG to BG (RGB)")
-(palette "Default")
+(palette "cisco")
 (vectors-polygonal yes)
 
 # end of gimp-vector-tool options

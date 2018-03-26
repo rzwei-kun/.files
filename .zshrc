@@ -7,6 +7,10 @@ export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
 
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_SCRIPT=/usr/bin/virtualenvwrapper.sh
+source /usr/bin/virtualenvwrapper_lazy.sh
+
 
 ## VAR
 plugins=(history wd vi-mode git zsh-autosuggestions)
@@ -38,7 +42,7 @@ alias bat='s tlp bat'
 alias ac='s tlp ac'
 alias v='vim'
 alias sv='s vim'
-alias pingg='ping 8.8.8.8 -s 0'
+alias pingg='ping 9.9.9.9 -s 0'
 alias t='tmux'
 alias ta='t attach'
 alias tk='t killw'

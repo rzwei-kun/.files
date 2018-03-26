@@ -1,11 +1,10 @@
 # GIMP gimp-smudge-tool options
 
-(foreground (color-rgb 1.000000 1.000000 1.000000))
-(background (color-rgb 0.925490 0.913725 0.874510))
+(foreground (color-rgb 1.000000 0.909804 0.803922))
+(background (color-rgb 0.011765 0.407843 0.592157))
 (opacity 0.860000)
 (brush "2. Hardness 100")
 (dynamics "Pressure Opacity")
-(palette "Default")
-(brush-size 59.000000)
+(palette "cisco")
 
 # end of gimp-smudge-tool options

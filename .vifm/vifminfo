@@ -4,33 +4,21 @@
 'd
 	/home/rzwei/Downloads
 	..
-1511834112
+1519807421
 'h
 	/home/rzwei
 	..
-1511832923
-'j
-	/media/AI/.Installed
-	CODEClosers
-1513747131
+1519745023
 'm
 	/media
 	..
-1511861352
-'t
-	/home/rzwei/.vifm/fuse/001_iou.zip/IOU
-	iou.py
-1513950459
-'v
-	/home/rzwei/Videos
-	..
-1513737667
+1519745036
 
 # Bookmarks:
 
 # TUI:
 al
-q1
+q0
 v2
 ov
 m-1
@@ -38,174 +26,129 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/home/rzwei/Videos/Dummies/Net
-	What is a Proxy Server.mp4
+d/home/rzwei/Downloads/pt
+	..
+0
+d/home/rzwei/Downloads
+	auto
+1
+d/home/rzwei/Downloads/auto
+	..
+0
+d/home/rzwei/Downloads
+	auto
+1
+d/home/rzwei/Downloads/auto
+	How-to-get-actionable-insight.png
+6
+d/home/rzwei/Downloads
+	Quotefancy-553878-3840x2160.jpg
 4
-d/home/rzwei/Videos/Dummies
-	Proxy
-8
-d/home/rzwei/Videos/Dummies/Proxy
-	..
-0
-d/home/rzwei/Videos/Dummies
-	Proxy
-8
-d/home/rzwei/Videos
-	..
-0
-d/home/rzwei
-	Videos
-5
-d/home/rzwei/Videos
-	..
-0
-d/home/rzwei/Downloads
-	..
-0
-d/home/rzwei
-	Downloads
-2
-d/home/rzwei/Downloads
-	..
-0
-d/home/rzwei/Videos
-	..
-0
-d/home/rzwei
-	Videos
-5
-d/home/rzwei/Videos
-	..
-0
 d/home/rzwei
 	GNS3
-3
-d/home/rzwei/Videos
-	Dummies
-1
-d/home/rzwei/Videos/Dummies
-	DNS
-2
-d/home/rzwei/Videos/Dummies/DNS
-	3.2 Implementing DNS on Windows Server 2016 (Step by Step guide).mp4
-2
-d/home/rzwei/Videos
+6
+d/home/rzwei/GNS3
 	..
 0
-d/home/rzwei/Downloads
-	APNIC-DNSconcepts-1.ppt
-1
 d/home/rzwei
-	Downloads
+	AndroidStudioProjects
 2
-d/home/rzwei/Downloads
-	Denpa-Kyoushi-Junichirou-Kagami-Cosplay-Costume-Custom-Any-Size (2).jpg
-12
-d/home/rzwei/Videos
-	Dummies
-1
-d/home/rzwei/Videos/Dummies
-	DNS
-2
-d/home/rzwei/Videos/Dummies/DNS
-	3.1 Implementing DNS on Windows Server 2016 (Step by Step guide).mp4
-1
-d/home/rzwei/Videos/Dummies
-	DNS
-2
-d/home/rzwei/Videos
-	Server Core Configuration & Management - Windows 2012 R2.mp4
-12
+d/home/rzwei/AndroidStudioProjects
+	..
+0
 d/home/rzwei
-	Downloads
+	AndroidStudioProjects
 2
-d/home/rzwei/Downloads
-	Wiki-background.jpg
+d/home/rzwei/AndroidStudioProjects
+	..
+0
+d/home/rzwei
+	Android
 1
+d/home/rzwei/Android
+	..
+0
 d/home/rzwei
 	Documents
+3
+d/home/rzwei/Documents
+	Resume
+3
+d/home/rzwei/Documents/Resume
+	..
+0
+d/home/rzwei/Documents
+	Python
+2
+d/home/rzwei/Documents/Python
+	devnet
+1
+d/home/rzwei/Documents/Python/devnet
+	yang-netconf-1.ipynb
+1
+d/home/rzwei/Documents/Python
+	devnet
 1
 d/home/rzwei/Documents
-	gabut.png
+	Python
+2
+d/home/rzwei/Documents/Python
+	devnet
 1
+d/home/rzwei/Documents
+	Python
+2
+d/home/rzwei/Documents/Python
+	devnet
+1
+d/home/rzwei/Documents
+	Resume
+3
+d/home/rzwei/Documents/Resume
+	..
+0
+d/home/rzwei/Documents
+	Resume
+3
+d/home/rzwei/Documents/Resume
+	..
+0
+d/home/rzwei/Documents
+	Resume
+3
 d
 
 # Right window history (oldest to newest):
-D/home/rzwei/Videos/Dummies/DNS
-	3.1 Implementing DNS on Windows Server 2016 (Step by Step guide).mp4
+D/home/rzwei/Documents/Tasks/Automation
+	files
 1
-D/home/rzwei/Videos/Dummies
-	DNS
+D/home/rzwei/Documents/Tasks
+	Outdoor
 2
-D/home/rzwei/Videos
-	Installing Active Directory, DNS and DHCP to Create a Windows Server 2012 Domain Controller.mp4
+D/home/rzwei/Documents/Tasks/Outdoor
+	..
+0
+D/home/rzwei/Documents/Tasks
+	Automation
 1
-D/home/rzwei
-	Videos
-5
-D/home/rzwei/Videos
-	..
-0
-D/home/rzwei
-	Videos
-5
-D/home/rzwei/Videos
-	..
-0
-D/home/rzwei
-	Videos
-5
-D/home/rzwei/Videos
-	Dummies
-1
-D/home/rzwei/Videos/Dummies
-	Encryption
-3
-D/home/rzwei/Videos/Dummies/Encryption
-	How asymmetric (public key) encryption works.mp4
-5
-D/home/rzwei/Videos/Dummies
-	GPO
-5
-D/home/rzwei/Videos/Dummies/GPO
-	..
-0
-D/home/rzwei/Videos/Dummies
-	Proxy
-8
-D/home/rzwei/Videos/Dummies/Proxy
-	..
-0
-D/home/rzwei/Videos/Dummies
-	GPO
-5
-D/home/rzwei/Videos/Dummies/GPO
-	70-410 Lesson 16_  Implementing a Group Policy Infrastructure (part 16_19).mp4
-2
-D/home/rzwei/Videos/Dummies
-	File
-4
-D/home/rzwei/Videos/Dummies/File
-	..
-0
-D/home/rzwei/Videos
-	..
-0
-D/home/rzwei
-	GNS3
+D/home/rzwei/Documents/Tasks/Automation
+	automation(1).odt
 3
 D/media
-	AI
-1
-D/media/AI
-	..
-0
+	WM
+5
+D/home/rzwei
+	Videos
+6
+D/home/rzwei/Videos
+	THOR1172264PH-RENAME.mkv
+4
 D/media
 	USB
 4
 D/media/USB
-	..
-0
+	ros
+1
 D/media
 	USB
 4
@@ -215,147 +158,125 @@ D/home/rzwei
 D/home/rzwei/Downloads
 	..
 0
-D/home/rzwei
-	Downloads
-2
-D/home/rzwei/Downloads
-	Nerv-logo-537C0D7AD5-seeklogo.com.png
+D/media
+	AI
+1
+D/media/AI
+	Screenshot_10.png
 3
+D/media
+	LV
+2
+D/media/LV
+	Masterpiece
+4
+D/media/LV/Audio
+	karakyou
+9
+D/home/rzwei
+	..
+0
+D/media
+	OS
+3
+D/media/OS
+	..
+0
+D/media/OS/Users/rzwei/Downloads
+	archlinux-2018.03.01-x86_64.iso
+1
+D/media/OS
+	..
+0
 D
 
 # Command line history (oldest to newest):
-:m ROS
-:mk ROS
-:mkdir ap
-:mkdir WINSERVER
-:mkdir asd
-:mk asd
-:mk win2k12
-:mkdir Dummies
-:mk Mail
-:mkdir Firewall
-:mk Active Directory
-:mkdir DNS
-:mkdir GPO
-:mkdir Virt
-:mkdir SDN/NFV
-:mkdir SDN\/NFV
-:mkdir SDN
-:mk Leveling
-:mk Web
-:mk Encryption
-:mkdir Net
-:mkdir has
-:mk has
-:mkdir nge
-:cd .Installer/
-:mkdir P
+:mk auto
+:mk brand
+:mk cert
+:mk bg
+:m
+:mk L2 selesai
+:mk mpls
+:mk mpls2
+:mk abc
+:q
+:mk MUMJP
+:mk Tasks
+:t
+:mk Napa
+:mk Presentations
+:mk Speaks
 :y
-:mk Proxy
-:mk File
+:mk NAPALM
+:cd Users/rzwei/
+:mk images
+:renam
+:mk VPN
 :ren
+:v touch
+:touch
+:touch fi
+:mk usb
+:mk pix
+:cd .Installed/
+:cd Users/rzwei/Downloads/
 
 # Search history (oldest to newest):
-/aria
-/heav
-/Pic
-/roti
-/pki
-/net
-/amtl
-/ripp
-/start
-/star
-/shit
-/htt
-/what a
-/what
-/domain
+/pack
+/russ
+/instal
 
 # Prompt history (oldest to newest):
-pHow DHCP Works.mp4
-pSDN/NVF
-pSecure Your Website with an SSL.mp4
-pHow does HTTPS provide Encryption.mp4
-pWhat is SSL.mp4
-pWhat Is SSL And Why Do You Need It.mp4
-pEncryption & Public Keys.mp4
-pWhat is Database & SQL.mp4
-pHTTP & HTML.mp4
-pIP Addresses & DNS.mp4
-pWhat is a Proxy Server.mp4
-pWhat is the Internet.mp4
-pAD
-pnge.eva.hk
-pDNS.mp4
-pInstalling AD.mp4
-pLocal Storage.mp4
-pUnderstanding DNS.mp4
-pRADIUS.mp4
-pConfiguring Distributed File System (DFS) on Windows Server 2012.mp4
-pHow Email Works.mp4
-pDeploying CA.mp4
-pWhat Is Reverse Proxy.mp4
-pumaru.mp4
-pvideoplayback.mp4
-pWhat are certificates.mp4
-p6.3.mp4
-pCA.mp4
-pやなぎなぎ.mp4
-pWiki-background.jpg
+pL2 selesai
+pldp-enable.png
+pldp-interfaces.png
+pC
+pResumee
+pResume
+pWeb
+pD
+pDev
+pDevs
+p[Wibusubs] I Want to Eat Your Pancreas (Kimi no Suizo wo Tabetai) Live Action 2017 [WEB-DL 1080p 5.1CH].mkv
+pTHOR1172264PH-RENAME.mkv
+pprogramming.pdf
 
 # Local filter history (oldest to newest):
-|rhel
-|jn
-|jnl
-|xw
-|png|jog
-|zip
-|png|jpg
-|air
-|iso
-|spi
-|pdf
-|fi
-|mp
-|html
+|baga
+|pk
 |rar
-|video
-|dn
-|dns
-|active
-|prox
-|cert
-|CA
-|ca
-|file
-|mp4
-|apnic
+|exe
 |jpg
+|bra
+|png
+|pngpdf
+|ccn
+|vpn
+|passwd
+|net
+|tita
+|csr
+|jpg|png|jpeg|gif
+|zip
+|im
+|iso
 |jpg|png
-|ba
-|gab
+|apk
+|pdf
 
 # Registers:
 
 # Directory stack (oldest to newest):
 
 # Trash content:
-t/home/rzwei/.local/share/Trash/000_171208071204.png
-	/home/rzwei/171208071204.png
-t/home/rzwei/.local/share/Trash/000_171208071256.png
-	/home/rzwei/171208071256.png
-t/home/rzwei/.local/share/Trash/000_171208081234.png
-	/home/rzwei/171208081234.png
-t/home/rzwei/.local/share/Trash/000_171208081236.png
-	/home/rzwei/171208081236.png
 
 # State:
-fVirtualBox VMs|lost\+found
+fVirtualBox VMs|lost\+found|Desktop
 i1
 [.1
 [F
-FVirtualBox VMs|lost\+found
+FVirtualBox VMs|lost\+found|Desktop
 I1
 ].1
 ]F
