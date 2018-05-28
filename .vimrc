@@ -27,6 +27,7 @@ set ignorecase
 set smartcase
 set incsearch
 set showmatch
+set cuc cul"
 
 " Tabbing
 filetype plugin indent on
@@ -55,7 +56,8 @@ cnoremap qq q!
 map <s-k> <nop>
 nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>:nohl<CR><esc>
-" map <C-n> :NERDTreeToggle<CR>
+
+nnoremap <C-n> :NERDTreeToggle<CR>
 
 nmap <Leader>w <Plug>(easymotion-bd-w)
 nmap s <Plug>(easymotion-s2)
@@ -78,23 +80,23 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tomtom/tcomment_vim'
-Plugin 'junegunn/goyo.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'easymotion/vim-easymotion'
 " Plugin 'tpope/vim-surround'
-" Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 Plugin 'thinca/vim-ambicmd'
-Plugin 'junegunn/limelight.vim'
-Plugin 'idanarye/breeze.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'othree/html5.vim'
-Plugin 'alvan/vim-closetag'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'terryma/vim-multiple-cursors'
+" Plugin 'terryma/vim-multiple-cursors'
 Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'tmhedberg/matchit'
-Plugin 'StanAngeloff/php.vim'
-Plugin 'ajmwagar/vim-dues'
+Plugin 'ajmwagar/vim-deus'
+
+" Ruby
+" Plugin 'vim-ruby/vim-ruby'
+
+" JS
+Plugin 'pangloss/vim-javascript'
 
 call vundle#end()
 filetype plugin indent on
@@ -102,53 +104,30 @@ filetype plugin indent on
 set laststatus=2
 set noshowmode
 
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType javascript set formatprg=prettier\ --stdin
+autocmd BufWritePre *.js :normal gggqG
+
+let g:deoplete#enable_at_startup = 1
+
 " cnoremap <expr> <Space> ambicmd#expand("\<Space>")
 " cnoremap <expr> <CR>    ambicmd#expand("\<CR>")
-
-let g:lightline = {'colorscheme':'seoul256'}
-autocmd VimEnter * redrawstatus!     
-set showcmd
-
-let g:limelight_conceal_ctermfg = 'gray'
-let g:limelight_conceal_ctermfg = 240
-let g:limelight_paragraph_span = 1
-
-function! s:goyo_enter()
-    silent !tmux set status off
-    silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
-    set noshowmode
-    set noshowcmd
-    set scrolloff=999
-    Limelight
-endfunction
-
-function! s:goyo_leave()
-    silent !tmux set status on
-    silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
-    set showmode
-    set showcmd
-    set scrolloff=5
-    Limelight!
-endfunction
-
-autocmd! User GoyoEnter nested call <SID>goyo_enter()
-autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 let g:ctrlp_custom_ignore = {
     \ 'dir':  '\v[\/]\.(git|hg|svn)$',
     \ 'file': '\v\.(exe|so|dll|mp3|pdf|zip|mp4|mkv|tar|gz|rar|mhtml|jpg|png|gif|jpeg)$',
     \ }
 
-" autocmd StdinReadPre * let s:std_in=1
-" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-" let g:NERDTreeDirArrowExpandable = ''
-" let g:NERDTreeDirArrowCollapsible = ''
-" let NERDTreeIgnore = [
-"             \ '\.mp[0-9]$', '\.zip$', '\.pdf$', '\.mhtml$',
-"             \ '\.tar.gz$', '\.7z$', '\.png$', '\.gif$', '\.jpg$',
-"             \ ]
-"
-"
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+let g:NERDTreeDirArrowExpandable = '+'
+let g:NERDTreeDirArrowCollapsible = '-'
+let NERDTreeIgnore = [
+            \ '\.mp[0-9]$', '\.zip$', '\.pdf$', '\.mhtml$',
+            \ '\.tar.gz$', '\.7z$', '\.png$', '\.gif$', '\.jpg$',
+            \ ]
+
+
 
 let g:AutoPairsShortcutJump = '<c-b>'
 let g:user_emmet_install_global = 0
@@ -158,13 +137,3 @@ autocmd FIleType html,css,php colorscheme deus
 au BufRead,BufNewFile *.md setlocal textwidth=80
 
 let g:user_emmet_leader_key = '<c-e>'
-
-function! PhpSyntaxOverride()
-  hi! def link phpDocTags  phpDefine
-  hi! def link phpDocParam phpType
-endfunction
-
-augroup phpSyntaxOverride
-  autocmd!
-  autocmd FileType php call PhpSyntaxOverride()
-augroup END
