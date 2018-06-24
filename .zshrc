@@ -1,10 +1,11 @@
 ## ENV
 export ZSH=$HOME/.oh-my-zsh
-export YARN=/home/rzwei/.yarn/bin
-export GEM_HOME=$HOME/.gem
-export GEM_BIN=$GEM_HOME/ruby/2.5.0/bin
+# export YARN=/home/rzwei/.yarn/bin
+# export GEM_HOME=$HOME/.gem
+# export GEM_BIN=$GEM_HOME/ruby/2.5.0/bin
 export NPM_PACKAGES="${HOME}/.npm-packages"
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/bin/core_perl:$YARN:$GEM_BIN:$NPM_PACKAGES/bin"
+# export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/bin/core_perl:$YARN:$GEM_BIN:$NPM_PACKAGES/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/bin/core_perl:$NPM_PACKAGES/bin"
 export TERM=xterm-termite
 export VISUAL=vim
 export GTK_IM_MODULE=ibus
@@ -18,8 +19,8 @@ export QT_IM_MODULE=ibus
 
 ## VAR
 #plugins=(history systemd vi-mode git zsh-autosuggestions)
-plugins=(history systemd vi-mode zsh-autosuggestions wd)
-ZSH_TMUX_AUTOSTART=true
+plugins=(systemd vi-mode zsh-autosuggestions wd)
+# ZSH_TMUX_AUTOSTART=true
 ZSH_THEME="ys"
 source $ZSH/oh-my-zsh.sh
 
@@ -30,9 +31,9 @@ ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 eval 'bindkey "^D" kill-word'
 bindkey '^ ' autosuggest-accept
 
-if [ -n "$VIRTUAL_ENV" ]; then
-  . "$VIRTUAL_ENV/bin/activate"
-fi
+# if [ -n "$VIRTUAL_ENV" ]; then
+#   . "$VIRTUAL_ENV/bin/activate"
+# fi
 
 
 ## Aliases

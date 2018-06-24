@@ -1,0 +1,22 @@
+
+xmonad.hs:81:34: warning: [-Wdeprecations]
+    In the use of ‘defaultPP’ (imported from XMonad.Hooks.DynamicLog):
+    Deprecated: "Use def (from Data.Default, and re-exported by XMonad.Hooks.DynamicLog) instead."
+   |
+81 | myLogHook h = dynamicLogWithPP $ defaultPP
+   |                                  ^^^^^^^^^
+
+xmonad.hs:128:1: warning: [-Wtabs]
+    Tab character found here, and in one further location.
+    Please use spaces instead.
+    |
+128 |         where nb = gray
+    | ^^^^^^^^
+
+xmonad.hs:150:18: warning: [-Wdeprecations]
+    In the use of ‘defaultConfig’
+    (imported from XMonad, but defined in XMonad.Config):
+    Deprecated: "Use def (from Data.Default, and re-exported by XMonad and XMonad.Config) instead."
+    |
+150 |   xmonad $ docks defaultConfig
+    |                  ^^^^^^^^^^^^^
